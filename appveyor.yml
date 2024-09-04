@@ -3,6 +3,9 @@ image: Visual Studio 2019
 
 configuration: Release
 
+install:
+  - ps: .\install-font.ps1
+
 build_script:
   - cmd: pip install pyinstaller
   - cmd: pyinstaller --onefile --windowed egogram_app.py
